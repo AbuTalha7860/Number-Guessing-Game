@@ -1,0 +1,124 @@
+:root {
+  --bg: linear-gradient(135deg, #1f1c2c, #928dab);
+  --text: #ffffff;
+  --box: rgba(255, 255, 255, 0.1);
+  --primary: #00ffcc;
+  --input-bg: rgba(255, 255, 255, 0.2);
+  --warn: #ffc107;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light {
+  --bg: linear-gradient(135deg, #fdfbfb, #ebedee);
+  --text: #000000;
+  --box: rgba(0, 0, 0, 0.05);
+  --primary: #007acc;
+  --input-bg: rgba(0, 0, 0, 0.05);
+  --warn: #cc3300;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.game-container {
+  background-color: var(--box);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+#guessField {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--input-bg);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+#subt {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#subt:hover {
+  background-color: #00e6b8;
+}
+
+.resultParas {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.feedback {
+  color: red;
+  font-size: 0.9rem;
+  height: 1.2rem;
+}
+
+.lowOrHi {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--warn);
+}
+
+#newGame {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+}
